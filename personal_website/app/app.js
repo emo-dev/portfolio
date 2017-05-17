@@ -9,10 +9,10 @@ var app = angular.module("TaylorPerkins", ['ui.router', 'ui.bootstrap'])
 
 	$stateProvider
 	//'landing' state handles both login and register pages
-	.state('home', {
+	.state('wrapper', {
 		url: '',
-		templateUrl: '../partials/Home.html',
-		controller: "HomeCtrl"			      		           
+		templateUrl: '../partials/Wrapper.html',
+		controller: "WrapperCtrl"			      		           
   	});
 })
 
