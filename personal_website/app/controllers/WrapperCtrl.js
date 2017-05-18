@@ -1,11 +1,8 @@
 "use strict";
 
-app.controller("WrapperCtrl", function($scope) {
+app.controller("WrapperCtrl", function($scope, PageLocation) {
   let s = $scope;  
 
-  s.showBorderBottom = (event) => {
-  	console.log(event);
-  }
 
 });
 

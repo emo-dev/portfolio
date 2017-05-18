@@ -2,6 +2,10 @@
 
 var app = angular.module("TaylorPerkins", ['ui.router', 'ui.bootstrap'])
 
+.service('PageLocation', function(){
+	this.location = "Home";
+})
+
 .config(function($stateProvider, $urlRouterProvider) {
 				
 	$urlRouterProvider.otherwise('');

@@ -1,10 +1,9 @@
-<nav class="main-nav">
+<nav class="main-nav" ng-controller="NavCtrl">
 	<ul>
 		<li class="nav-link"
-		     ng-mouseenter="showBorderBottom($event)"><a href="#about">About</a></li>
-		<li class="nav-link"
-		     ng-mouseenter="showBorderBottom($event)"><a href="#projects">Projects</a></li>
-		<li class="nav-link"
-		     ng-mouseenter="showBorderBottom($event)"><a href="#contact">Contact</a></li>		
+			ng-repeat="page in NavList"
+			ng-mouseenter="showNavBorderBottom($event)"
+			ng-mouseleave="hideNavBorderBottom($event)"
+			ng-click="changePageLocation(page)"><a>{{page}}</a></li>		
 	</ul>
 </nav>
