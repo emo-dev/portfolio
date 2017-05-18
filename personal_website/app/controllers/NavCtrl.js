@@ -1,25 +1,29 @@
 "use strict";
 
-app.controller("NavCtrl", function($scope, PageLocation) {
-  let s = $scope; 
-  let nav = $('nav');    
+app.controller("NavCtrl", function($scope, $state, PageLocation) {
+  let s = $scope;   
 
   s.NavList = ['About', 'Projects', 'Contact'];
 
   s.showNavBorderBottom = () => {      
     s.pageLocation = PageLocation.location.toLowerCase();        
-    $( nav ).find( 'a' ).addClass( 'nav-' + s.pageLocation );        
+    $( 'nav' ).find( 'a' ).addClass( 'nav-' + s.pageLocation );        
   };
 
-  s.changePageLocation = (page) => PageLocation.location = page;  
+  /*
+      This watch function is for potentially changing the background color of the page between views as well as change 
+      the color of the navbar lettering
+  */
+  // s.$watch(
+  //   function( ) { return PageLocation.location; },    
+  //   function( newValue, oldValue ) {
+  //     let currentNav = oldValue.toLowerCase();
+  //     let newNav = newValue.toLowerCase();
+  //     $( nav ).find( 'a' ).removeClass( 'nav-' + currentNav);      
+  //   });
+  
 
-  s.$watch(
-    function( ) { return PageLocation.location; },    
-    function( newValue, oldValue ) {
-      let currentNav = oldValue.toLowerCase();
-      let newNav = newValue.toLowerCase();
-      $( nav ).find( 'a' ).removeClass( 'nav-' + currentNav);      
-    });
+
 
 });
 

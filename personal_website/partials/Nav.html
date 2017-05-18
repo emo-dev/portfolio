@@ -1,9 +1,10 @@
+
 <nav class="main-nav" ng-controller="NavCtrl">
 	<ul>
 		<li class="nav-link"
 			ng-repeat="page in NavList"
 			ng-mouseenter="showNavBorderBottom($event)"
 			ng-mouseleave="hideNavBorderBottom($event)"
-			ng-click="changePageLocation(page)"><a>{{page}}</a></li>		
+			ng-click="$parent.changePageLocation(page)"><a>{{page}}</a></li>		
 	</ul>
-</nav>
+</nav>		

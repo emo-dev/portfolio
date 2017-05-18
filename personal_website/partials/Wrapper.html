@@ -1,5 +1,13 @@
 
-<div class="row">
-	<div ng-include="'../partials/Nav.html'" scope="" onload=""></div>
+
+<div class="wrapper-nav-display" ng-include="'../partials/Nav.html'" scope="" onload=""></div>	
+<div class="wrapper-home-display" ng-include="'../partials/HomeDisplay.html'"></div>
+
+
+
+<div class="container main-content-container">
+	<div class="row">
+		<div ui-view></div>	
+	</div>	
 </div>
 
